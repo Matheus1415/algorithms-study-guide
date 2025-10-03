@@ -1,4 +1,4 @@
-# AlgoTS (ou clean-algorithms-ts) 🚀
+# AlgoTS (ou clean-algorithms-ts) 
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
@@ -75,6 +75,38 @@ npm run dev
 
 Todos os algoritmos criados no projeto devem ser **importados e chamados a partir do arquivo `src/index.ts`**.  
 Isso mantém o projeto organizado e permite rodar os exemplos`.
+
+---
+
+## Usando Excalidraw no VS Code
+
+Para facilitar a criação de diagramas e visualizações passo a passo dos algoritmos, você pode usar o **Excalidraw** diretamente no VS Code.  
+
+Siga os passos abaixo para instalar e começar:
+
+### 1️⃣ Abrir o VS Code
+
+Certifique-se de que você tem o VS Code instalado em sua máquina.  
+Se não tiver, baixe aqui: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+---
+
+### 2️⃣ Abrir a aba de Extensões
+
+No VS Code, clique no ícone de **Extensões** na barra lateral esquerda (ou use o atalho `Ctrl+Shift+X` no Windows / `Cmd+Shift+X` no Mac).
+
+---
+
+### 3️⃣ Buscar a extensão Excalidraw
+
+Na barra de pesquisa das extensões, digite: **Excalidraw for VS Code**.
+
+---
+
+### 4️⃣ Instalar a extensão
+
+Clique no botão **Instalar**.  
+Após a instalação, você verá o botão **Abrir Excalidraw** ou poderá criar novos arquivos `.excalidraw`.
 
 Licença
 -------
