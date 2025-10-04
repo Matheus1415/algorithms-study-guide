@@ -1,6 +1,4 @@
-import { linearSearch } from "./algorithms/module01/linearSearch";
+import { vowelCounter } from "./algorithms/module01/vowelCounter";
 
-const numbers = [10, 23, 45, 70, 11, 15];
-const targetNumber = 70;
-const resultIndex = linearSearch(numbers, targetNumber);
-console.log(`Número ${targetNumber} encontrado no índice:`, resultIndex);
+const text = "Aprender TypeScript é muito bom!";
+console.log(`Vogais em "${text}":`, vowelCounter(text));
