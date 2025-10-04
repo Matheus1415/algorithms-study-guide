@@ -1,4 +1,13 @@
-import { vowelCounter } from "./algorithms/module01/vowelCounter";
+import { checkDuplicate, bannedUsers } from "./algorithms/module01/checkDuplicate";
 
-const text = "Aprender TypeScript é muito bom!";
-console.log(`Vogais em "${text}":`, vowelCounter(text));
+const username = "admin-user";
+
+const isDuplicate = checkDuplicate(bannedUsers, username);
+
+if (isDuplicate) {
+  console.log(
+    `O nome de usuário "${username}" já existe na lista de banidos.`
+  );
+} else {
+  console.log(`O nome de usuário "${username}" está disponível.`);
+}
