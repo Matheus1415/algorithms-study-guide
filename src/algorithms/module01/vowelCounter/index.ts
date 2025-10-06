@@ -1,5 +1,3 @@
-import { count } from "console";
-
 /**
  * Contagem de Vogais (Vowel Counter)
  *
