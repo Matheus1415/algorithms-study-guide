@@ -1,13 +1,11 @@
-import { checkDuplicate, bannedUsers } from "./algorithms/module01/checkDuplicate";
+import { breadthFirstSearch } from "./algorithms/module02/BreadthFirstSearch";
 
-const username = "admin-user";
+const graph = {
+  A: ["B", "C"],
+  B: ["A", "D", "E"],
+  C: ["A"],
+  D: ["B"],
+  E: ["B"],
+};
 
-const isDuplicate = checkDuplicate(bannedUsers, username);
-
-if (isDuplicate) {
-  console.log(
-    `O nome de usuário "${username}" já existe na lista de banidos.`
-  );
-} else {
-  console.log(`O nome de usuário "${username}" está disponível.`);
-}
+console.log("Ordem de visita BFS:", breadthFirstSearch(graph, "A"));
