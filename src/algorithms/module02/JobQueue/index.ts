@@ -17,8 +17,10 @@
 export interface Job {
   id: number;
   description: string;
-  duration: number; // tempo que a tarefa leva para executar
-  delayAfter?: number; // opcional: espera após finalizar
+  // tempo que a tarefa leva para executar
+  duration: number;
+  // opcional: espera após finalizar
+  delayAfter?: number;
 }
 
 export class JobQueue {
@@ -27,8 +29,6 @@ export class JobQueue {
 
   enqueue(job: Job) {
     this.queue.push(job);
-    console.log(`Tarefa adicionada: ${job.description}`);
-
     if (!this.isProcessing) {
       this.processQueue();
     }
@@ -66,8 +66,8 @@ export class JobQueue {
     const start = Date.now();
     const end = start + time;
 
+    // "trava" o loop até que o tempo seja atingido
     while (Date.now() < end) {
-      // "trava" o loop até que o tempo seja atingido
       await new Promise((resolve) => setTimeout(resolve, 1));
     }
   }
