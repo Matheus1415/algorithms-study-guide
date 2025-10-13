@@ -5,9 +5,6 @@
  * - Tarefas demoradas são adicionadas a uma fila (queue).
  * - Um "worker" processa cada tarefa em ordem (FIFO), aguardando a conclusão antes de iniciar a próxima.
  *
- * Uso Real:
- * - Envio de e-mails, geração de relatórios, processamento de pagamentos.
- *
  * Complexidade:
  * - Inserção (enqueue): O(1)
  * - Remoção/Processamento: O(n)

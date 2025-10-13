@@ -1,8 +1,30 @@
-import { JobQueue } from "./algorithms/module02/JobQueue";
+import { PriorityQueue } from "./algorithms/module02/PriorityQueue";
 
-const queue = new JobQueue();
+const priorityQueue = new PriorityQueue();
 
-queue.enqueue({ id: 1, description: "Enviar e-mail de boas-vindas", duration: 10000, delayAfter: 2000 });
-queue.enqueue({ id: 2, description: "Gerar relatório semanal", duration: 15000, delayAfter: 2000 });
-queue.enqueue({ id: 3, description: "Processar pagamento do pedido #4521", duration: 20000 });
+priorityQueue.enqueue({
+  id: 1,
+  description: "Impressão urgente do diretor",
+  priority: 1,
+  duration: 3000,
+});
+priorityQueue.enqueue({
+  id: 2,
+  description: "Relatório de 500 páginas do estagiário",
+  priority: 5,
+  duration: 2000,
+});
+priorityQueue.enqueue({
+  id: 3,
+  description: "Processar pagamento Premium",
+  priority: 2,
+  duration: 2500,
+});
+priorityQueue.enqueue({
+  id: 4,
+  description: "Processar pagamento padrão",
+  priority: 4,
+  duration: 1500,
+});
 
+setTimeout(() => priorityQueue.exportToSheet(), 12000);
