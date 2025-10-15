@@ -1,30 +1,17 @@
-import { PriorityQueue } from "./algorithms/module02/PriorityQueue";
+import { decrypt, encrypt } from "./algorithms/module03/encrypt";
 
-const priorityQueue = new PriorityQueue();
+const message = "SegredoConfidencial123";
+const key = 5;
 
-priorityQueue.enqueue({
-  id: 1,
-  description: "Impressão urgente do diretor",
-  priority: 1,
-  duration: 3000,
-});
-priorityQueue.enqueue({
-  id: 2,
-  description: "Relatório de 500 páginas do estagiário",
-  priority: 5,
-  duration: 2000,
-});
-priorityQueue.enqueue({
-  id: 3,
-  description: "Processar pagamento Premium",
-  priority: 2,
-  duration: 2500,
-});
-priorityQueue.enqueue({
-  id: 4,
-  description: "Processar pagamento padrão",
-  priority: 4,
-  duration: 1500,
-});
+console.log("Mensagem original:", message);
 
-setTimeout(() => priorityQueue.exportToSheet(), 12000);
+const encrypted = encrypt(message, key);
+console.log("Criptografado:", encrypted);
+
+const decrypted = decrypt(encrypted, key);
+console.log("Descriptografado:", decrypted);
+
+console.table([
+  { Tipo: "Criptografado", Valor: encrypted },
+  { Tipo: "Descriptografado", Valor: decrypted },
+]);
