@@ -1,17 +1,13 @@
-import { decrypt, encrypt } from "./algorithms/module03/encrypt";
+import { vigenereDecrypt, vigenereEncrypt } from "./algorithms/module03/vigenere";
 
-const message = "SegredoConfidencial123";
-const key = 5;
+const text = "Menssagem Secreta";
+const key = "CHAVE";
 
-console.log("Mensagem original:", message);
+const encrypted = vigenereEncrypt(text, key);
+const decrypted = vigenereDecrypt(encrypted, key);
 
-const encrypted = encrypt(message, key);
-console.log("Criptografado:", encrypted);
-
-const decrypted = decrypt(encrypted, key);
-console.log("Descriptografado:", decrypted);
-
-console.table([
-  { Tipo: "Criptografado", Valor: encrypted },
-  { Tipo: "Descriptografado", Valor: decrypted },
-]);
+console.table({
+  TextoOriginal: text,
+  Criptografado: encrypted,
+  Descriptografado: decrypted,
+});
