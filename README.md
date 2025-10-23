@@ -31,17 +31,10 @@ Principais objetivos:
 
 ---
 
-## Público-alvo
-- Estudantes de Engenharia de Software e Ciência da Computação.  
-- Desenvolvedores iniciantes interessados em algoritmos e TypeScript.  
-- Pessoas que valorizam código limpo e boas práticas.
-
----
-
 ## Diferenciais
 - Código escrito com **padrões de Clean Code**, legível e fácil de entender.  
 - Comentários e explicações didáticas de complexidade (Big O).  
-- Possibilidade de **visualizar passo a passo dos algoritmos** (Excalidraw / Mermaid).  
+- Possibilidade de **visualizar passo a passo dos algoritmos** (Excalidraw).  
 - Estrutura modular: pastas separadas por tipo de algoritmo e estrutura de dados.
 
 ---
